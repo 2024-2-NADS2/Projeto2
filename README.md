@@ -16,16 +16,11 @@
 
 <p align="center">
 <img src="https://i.imgur.com/HHLvNT2.jpeg" alt="Cultura Hub" border="0">
-  Feito por <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
-</p>
 
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+CulturaHub é uma plataforma criada para divulgar eventos culturais, inicialmente em São Paulo. Nela, seus usuários podem filtrar eventos de acordo com a data, local e horário. A iniciativa da plataforma é conectar pessoas com eventos que conversem com seus interesses e região. 
 <br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
+
 
 ## 🛠 Estrutura de pastas
 
