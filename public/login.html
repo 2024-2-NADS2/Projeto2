@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="assets/shortcut-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/validation.js" defer></script>
+    <link rel="stylesheet" href="styles/style-login.css">
+    <title>Entrar</title>
+</head>
+<body>
+    <header>
+        <!-- Barra de navegação -->
+        <nav class="nav-container">
+            <nav class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/CHUB7.png" alt="Logo Cultura Hub">
+                </a>
+                <!-- Container de pesquisa e localização -->
+                <div class="filtro-container">
+                    <div class="filtro-content">
+                        <input class="input-box" type="text" placeholder="Buscar eventos, shows, festivais...">
+                        <button class="btn-input" type="submit">
+                        <label for="btn-input"><i class="fa fa-search" aria-hidden="true"></i></label>
+                        </button>
+                    </div>
+                    <div class="local-container">
+                        <button id="local-btn">Localização<i class="fa fa-map-marker"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+    </header>
+    <main>
+        <div class="lista-evento">
+            <ul class="eventos">
+                <li class="all-events"><a href="#">Todos os Eventos</a></li>
+                <li><a href="#">Shows e Festas</a></li>
+                <li><a href="#">Cinema, Teatro e Espetáculos</a></li>
+                <li><a href="#">Congressos e Palestras</a></li>
+                <li><a href="#">Festivais</a></li>
+            </ul>
+        </div>
+        <section class="cadastro-container">
+            <div class="wrapper">
+                <h1>Acesse sua conta</h1>
+                <p id="mensagem-erro"></p>
+                <form id="form">
+                    <div>
+                        <label for="input-email">@</label>
+                        <input type="email" name="email" id="input-email" placeholder="Email">
+                    </div>
+                    <div>
+                        <label for="input-senha"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg></label>
+                        <input type="password" name="password" id="input-senha" placeholder="Senha">
+                    </div>
+                    <button type="submit">Entrar</button>
+                    <p class="esquece-senha">Esqueceu sua senha? <a class="esquece-senha" href="#">Clique aqui!</a></p>
+                </form>
+                <p>Não possui uma conta? <a href="cadastro.html">Cadastre-se!</a></p>
+            </div>
+        </section>
+    </main>
+   <!--Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="img-container">
+                <img src="assets/CHUB7.png" alt="">
+            </div>
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">FaQ</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+            <div class="footer-copy">
+                <p>todos os direitos reservados© 2024 </p>
+            </div>
+    </footer>
+
+</body>
+</html>
