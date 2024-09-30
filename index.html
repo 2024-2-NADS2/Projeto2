@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="shortcut icon" type="imagex/png" href="assets/shortcut-icon.png">
+    <title>Cultura Hub</title>
+</head>
+<body>
+    <header>
+      <!-- Barra de navegação -->
+        <nav class="nav-container">
+            <nav class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/CHUB7.png" alt="Logo Cultura Hub">
+                </a>
+                <!-- Container de pesquisa e localização -->
+                <div class="filtro-container">
+                    <div class="filtro-content">
+                        <input class="input-box" type="text" placeholder="Buscar eventos, shows, festivais...">
+                        <button class="btn-input" type="submit">
+                          <label for="btn-input"><i class="fa fa-search" aria-hidden="true"></i></label>
+                        </button>
+                    </div>
+                    <div class="local-container">
+                        <button id="local-btn">Localização<i class="fa fa-map-marker"></i></button>
+                    </div>
+                </div>
+                <!-- Container para Acessar ou se cadastrar no site-->
+                <div class="botao-container">
+                  <a href="login.html"><button id="login-btn">ENTRAR</button></a>
+                  <a href="cadastro.html"><button id="cadastro-btn">CADASTRE-SE</button></a>
+                </div>
+            </nav>
+        </nav>
+    </header>
+    <main>
+      <!-- Lista inicial de recomentações de eventos -->
+        <div class="lista-evento">
+            <ul class="eventos">
+                <li class="all-events"><a href="#">Todos os Eventos</a></li>
+                <li><a href="#">Shows e Festas</a></li>
+                <li><a href="#">Cinema, Teatro e Espetáculos</a></li>
+                <li><a href="#">Congressos e Palestras</a></li>
+                <li><a href="#">Festivais</a></li>
+            </ul>
+        </div>
+        <!-- Sessão do slide de entrada -->
+        <section class="main-slider">
+            <div class="slider">
+                <div class="slides">
+                    <!-- Radio botões -->
+                     <input type="radio" name="radio-btn" id="radio1">
+                     <input type="radio" name="radio-btn" id="radio2">
+                     <input type="radio" name="radio-btn" id="radio3">
+                     <input type="radio" name="radio-btn" id="radio4">
+                     <input type="radio" name="radio-btn" id="radio5">
+                     <!-- fim  -->
+
+                     <!-- slide imgs -->
+                    <div class="slide first">
+                        <a href="#"><img src="https://placehold.co/600x400/orange/white" alt="Imagem 1"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="#"><img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Imagem 2"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="#"><img src="https://placehold.co/600x400/430000/FFFFFF/png" alt="Imagem 3"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="#"><img src="https://placehold.co/600x400/000076/FFFFFF/png" alt="Imagem 4"></a>
+                    </div>
+                    <div class="slide">
+                        <a href="#"><img src="https://placehold.co/600x400/004500/FFFFFF/png" alt="Imagem 5"></a>
+                    </div>
+                      <!-- img slide botão -->
+
+                      <!-- navegação automática -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                        <div class="auto-btn5"></div>
+                    </div>
+                </div>
+                  <!-- Navegação manual -->
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                </div>
+            </div>
+        </section>
+        <!-- Sessão dos cards de eventos -->
+        <section class="sessao-swiper">
+            <!-- Tema da sessão -->
+            <h1 class="section-titulo">Para ver em família</h1>
+            <!-- Card slides container -->
+            <div class="container swiper">
+                <div class="card-wrapper">
+                  <ul class="card-list swiper-wrapper">
+                    <!-- Card IMG e infos -->
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol1</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol2</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol3</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol4</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol5</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol6</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol7</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol8</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <!-- Navigation Buttons -->
+                  <div class="swiper-slide-button swiper-button-prev"></div>
+                  <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+        </section>
+        <!-- Sessão dos cards de eventos 2-->
+        <section class="sessao-swiper">
+            <h1 class="section-titulo">Para as crianças</h1>
+            <div class="container swiper">
+                <div class="card-wrapper">
+                  <!-- Card slides container -->
+                  <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol1</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol2</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol3</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol4</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol5</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol6</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol7</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol8</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- Navigation Buttons -->
+                  <div class="swiper-slide-button swiper-button-prev"></div>
+                  <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+        </section>
+        <!-- Sessão dos cards de eventos 3 -->
+        <section class="sessao-swiper">
+            <h1 class="section-titulo">Com fome?</h1>
+            <div class="container swiper">
+                <div class="card-wrapper">
+                  <!-- Card slides container -->
+                  <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol1</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol2</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol3</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol4</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol5</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol6</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol7</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol8</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- Navigation Buttons -->
+                  <div class="swiper-slide-button swiper-button-prev"></div>
+                  <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+        </section>
+        <!-- Sessão dos cards de eventos 4-->
+        <section class="sessao-swiper">
+            <h1 class="section-titulo">Para aproveitar a semana</h1>
+            <div class="container swiper">
+                <div class="card-wrapper">
+                  <!-- Card slides container -->
+                  <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol1</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol2</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol3</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol4</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol5</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol6</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol7</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol8</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <!-- Navigation Buttons -->
+                  <div class="swiper-slide-button swiper-button-prev"></div>
+                  <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+        </section>
+        <!-- Sessão dos cards de eventos 5-->
+        <section class="sessao-swiper">
+            <h1 class="section-titulo">Virando a noite</h1>
+            <div class="container swiper">
+                <div class="card-wrapper">
+                  <!-- Card slides container -->
+                  <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol1</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol2</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol3</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol4</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol5</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol6</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol7</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Card Image" class="card-image">
+                        <p class="data-evento">Sáb, 29 Ago 20:00</p>
+                        <h2 class="card-title">Show Matuê Ft. Mc Carol8</h2>
+                        <p class="local-card">Rua Mariano Procópio</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- Navigation Buttons -->
+                  <div class="swiper-slide-button swiper-button-prev"></div>
+                  <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+        </section>
+    </main>
+    <footer>
+      <!-- Footer Content -->
+        <div class="footer-container">
+            <div class="img-container">
+                <img src="assets/CHUB7.png" alt="">
+            </div>
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">FaQ</a></li>
+                <li><a href="#">Criar evento</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+            <div class="footer-copy">
+                <p>todos os direitos reservados© 2024 </p>
+            </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+</body>
+</html
