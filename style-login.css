@@ -1,0 +1,392 @@
+/* reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Predefinições */
+body, button, input, select, textarea{
+
+    font-family: "Lexend", sans-serif;
+    /* font-family: "Heebo", sans-serif; */
+  
+}
+/* Variáveis de cores */
+:root{
+    --cor-principal: #e40031;
+    --cor-secundaria: #530a0a;
+    --cor-de-fundo: #8a8a8a;
+    --cor-branca: #ffffff;
+    --cor-preta-card: black;
+    --cor-de-fundo-card: #D9D9D9
+}
+
+/* Alterações na barra de navegação */
+.nav-container{
+    background-color: var(--cor-principal);
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 1.2em 0em;
+}
+
+.nav-logo img{
+    max-width: 12.5rem;
+    max-height: 6.25rem;
+    width: auto;
+    height: auto;
+}
+/*barra de navegação*/
+.nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.filtro-container{
+    margin-left: 40px;
+    width: 80%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+
+}
+
+.filtro-content{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-box{
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    border: none;
+    border-right: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 5px 0px 0px 5px;
+    font-weight: 200;
+    font-size: 17px;
+    
+}
+
+.input-box:focus{
+    color: #8a8a8a;
+}
+
+.btn-input{
+    
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    color: #8a8a8a;
+    cursor: pointer;
+    
+    
+}
+
+.btn-input label{
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    color: #8a8a8a;
+    cursor: pointer;
+    
+}
+
+.local-container{
+    max-width: 140px;
+    width: 100%;
+}
+
+#local-btn{
+    width: 100%;
+    height: 40px;
+    padding: 0 8px;
+    border: none;
+    color: var(--cor-branca);
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#local-btn i{
+    margin-left: 10px;
+    font-size: 27px;
+    color: #530a0a;
+}
+
+
+/* lista de recomendaçoes */
+.lista-evento{
+    background-color: #e2e2e2;
+    padding: 20px;
+    margin-bottom: 40px;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.eventos{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    font-size: 18px;
+    
+}
+
+.eventos a{
+    text-decoration: none;
+    color: #e40031;
+}
+
+
+
+
+/* Alterações login */
+
+.login-container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.wrapper{
+    max-width: 500px;
+    background-color: #f2f2f2;
+    margin: 40px auto;
+    background-color:var();
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+ 
+}
+
+.wrapper h1{
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    font-weight: 200;
+    color: #424242;
+    text-transform: uppercase;
+}
+
+.wrapper form{
+
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: min(500px, 100%);
+}
+
+.wrapper form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--cor-de-fundo);
+    fill: var(--cor-de-fundo);
+    color: #f2f2f2;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.wrapper form input{
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #8a8a8a;
+    border-left: none;
+    transition: 0.5s ease;
+    font-weight: 200;
+}
+
+
+.wrapper form input:focus{
+    outline: none;
+
+}
+.wrapper div:has(input:focus) >label{
+    background-color: #424242;
+    transition: 0.6s;
+}
+
+
+
+.wrapper form button{
+    margin-top: 10px;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-de-fundo);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.wrapper form button:hover{
+    background-color: var(--cor-principal);
+}
+
+.wrapper form button:focus{
+    outline: none;
+    background-color: var(--cor-principal);
+}
+.esquece-senha{
+    font-size: 14px;
+}
+
+.wrapper p{
+    font-weight: 300;
+}
+
+.wrapper a{
+    
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+.wrapper a:hover{
+    text-decoration: underline;
+}
+
+/* Responsividade dos elementos */
+@media(max-width: 1100px){
+    .nav-content .nav-logo{
+        margin-left: 15px;
+    }
+
+    .lista-evento{
+        display: none;
+    }
+    .wrapper{
+        margin-top: 40px;
+        width: min(600px, 100%);
+    }
+}
+
+@media(max-width: 759px){
+    .nav-content{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .input-box{
+        font-size: 13px;
+        height: 30px;
+    }
+    .btn-input{
+        height: 30px;
+        width: 30px;
+        font-size: 13px;
+    }
+    .btn-input label{
+        height: 30px;
+        width: 30px;
+        font-size: 14px;
+    }
+    #local-btn{
+        font-size: 14px;
+    }
+    #local-btn i{
+        font-size: 17px;
+    }
+}
+/* Alteraçao na cor do label ao sinalizar erro */
+.wrapper .incorreto label{
+    background-color: var(--cor-principal);
+}
+.wrapper .incorreto input{
+    border-color: var(--cor-principal);
+}
+
+/* Define uma cor de erro de input */
+#mensagem-erro{
+    color: #e40031;
+    
+}
+
+.footer-container{
+    background-color: var(--cor-principal);
+    padding: 5rem;   
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.img-container img{
+    max-width: 12.5rem;
+    max-height: 6.25rem;
+    width: auto;
+    height: auto;
+
+}
+
+.footer-container ul{
+    display: flex;
+    gap: 2em;
+    margin-top: 1.1em;
+    margin-bottom: 6em;
+    justify-content: center;
+    
+}
+
+.footer-container ul li , a{
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+    color: var(--cor-branca);
+    
+}
+
+.img-container, .footer-copy{
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer-copy p{
+    color: var(--cor-branca);
+    font-size: 20px;
+}
+
+
