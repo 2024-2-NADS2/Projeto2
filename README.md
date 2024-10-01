@@ -10,7 +10,7 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/felipeosantosojo/">Felipe Oluwaseun Santos Ojo</a>, <a href="https://www.linkedin.com/in/gustavocastro01/">Gustavo Castro</a>, <a href="https://www.linkedin.com/in/marcella-santana-b76883262/">Marcella Santana</a>, <a href="https://www.linkedin.com/in/thays-pontes-14663822b//">Thays Pontes</a>.
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Lopes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savinor</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Carlos Buesso</a>,<a href="https://www.linkedin.com/in/victorbarq/">Victor Rosetti</a>.
+## Professores Orientadores: <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Lopes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Carlos Buesso</a>,<a href="https://www.linkedin.com/in/victorbarq/">Victor Rosetti</a>.
 
 ## Descrição
 
