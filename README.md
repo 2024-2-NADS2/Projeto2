@@ -53,8 +53,9 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>src</b>: Pasta que contém o código fonte.
 
-<p><a href="https://www.figma.com/design/44VzgjpIxXsirxOWdJtm4A/Untitled?node-id=0-1&node-type=canvas&t=pEwqi3yuOjF1taog-0" target="_blank">Link do Modelo no Figma</a></p>
+## 🖼 Figma do Projeto
 
+<p><a href="https://www.figma.com/design/44VzgjpIxXsirxOWdJtm4A/Untitled?node-id=0-1&node-type=canvas&t=pEwqi3yuOjF1taog-0" target="_blank">Link do Modelo no Figma</a></p>
 
 ## 📋 Licença/License
 
