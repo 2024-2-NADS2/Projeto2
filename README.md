@@ -101,18 +101,35 @@ Coloque código do prompt de comnando se for necessário
 ```
 ## 🗃 Histórico de lançamentos
 A cada atualização os detalhes devem ser lançados aqui.
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.2.7 - 26/09/2024
+    * Figma do projeto atualizado.
+    * Backlog das classes e seus atributos.
+* 0.2.6 - 23/09/2024
+    * Teste de responsividade.
+* 0.2.5 - 22/09/2024
+    * Criação do JS.
+    * Teste de implementação e validação dos arquivos no VSCode.
+* 0.2.4 - 18/09/2024
+    * Projeto das páginas de cadastro e log-in feito.
+    * Servidor CodeSandBox consultado.
+* 0.2.3 - 17/09/2024
+    * Mapa de navegação do site definido.
+    * Figma do projeto atualizado.
+* 0.2.2 - 13/09/2024
+    * Ideia para a logo do projeto.
+* 0.2.1 - 02/09/2024
+    * Primeiro protótipo do HTML e do CSS lançados
+    * Definição das ideias de card e banner do projeto.
+* 0.2.0 - 01/09/2024
+    * Definição do projeto no Figma e ideia do banner implementada.
+    * Definição de atributos da classe Evento.
+* 0.1.1 - 30/08/2024
+    * Definição da paleta de cores.
+* 0.1.0 - 20/08/2024
+    * Definição da ideia e ODS do projeto.
+    * Wireframe definido por membros do grupo.
+* 0.0.1 - 08/08/2024
+    * Início do projeto.
 
 ## 🖼 Figma do Projeto
 
