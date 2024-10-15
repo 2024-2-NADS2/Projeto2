@@ -53,17 +53,25 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>src</b>: Pasta que contém o código fonte.
 
-## 🖥 Instalação 
+## 🖥 Arquivos necessários 
 
 <b> HTML </b>
 
-<b>JSS</b>
+<b>JS</b>
 
 <b>CSS</b>
 
 <b>React</b>
 
 <b>Classes</b>
+
+<b>Figma</b>
+
+<b>Servidor CodeSandBox</b>
+
+<b>Banco de dados relacional</b>
+
+<b>Banco de dados não-relacional - MongoDB</b>
 
 ## 🖼 Figma do Projeto
 
