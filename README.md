@@ -15,7 +15,7 @@
 ## Descrição
 
 <p align="center">
-<img src="https://i.imgur.com/HHLvNT2.jpeg" alt="Cultura Hub" border="0">
+<img src="https://i.imgur.com/mne6mnP.png" alt="Cultura Hub" border="0">
 
 
 CulturaHub é uma plataforma criada para divulgar eventos culturais, inicialmente em São Paulo. Nela, seus usuários podem filtrar eventos de acordo com a data, local e horário. A iniciativa da plataforma é conectar pessoas com eventos que conversem com seus interesses e região. 
