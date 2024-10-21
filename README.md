@@ -1,4 +1,4 @@
-# FECAP - Fundação de Comércio Álvares Penteado
+# FECAP - Fundação Escola de Comércio Álvares Penteado
 
 <p align="center">
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
@@ -74,17 +74,17 @@ Há também 4 pastas que seguem da seguinte forma:
 <b>Banco de dados não-relacional - MongoDB</b>
 
 ## 🛠 Instalação
-<b>VSCode:</b>
+<b>1.0 VSCode:</b>
 
 Necessidade deste editor de código-fonte para o projeto e seu código em inscrito e, em seguida, adicionar a extensão Live Server.
 
-<b>HTML HomePage:</b>
+<b>1.1 HTML HomePage:</b>
 
 Implementação da linhas de código HTML do projeto para estruturar a página web.
 ```sh
 Coloque código do prompt de comnando se for necessário
 ```
-<b>CSS HomePage:</b>
+<b>1.2 CSS HomePage:</b>
 
 Estilização da página por meio do CSS.
 ```sh
