@@ -74,21 +74,22 @@ Há também 4 pastas que seguem da seguinte forma:
 <b>Banco de dados não-relacional - MongoDB</b>
 
 ## 🛠 Instalação
-<b>Android:</b>
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
+<b>VSCode:</b>
+
+Necessidade deste editor de código-fonte para o projeto e seu código em inscrito e, em seguida, adicionar a extensão Live Server.
+
+<b>HTML HomePage:</b>
+
+Implementação da linhas de código HTML do projeto para estruturar a página web.
 ```sh
 Coloque código do prompt de comnando se for necessário
 ```
-<b>Windows:</b>
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
+<b>CSS HomePage:</b>
+
+Estilização da página por meio do CSS.
 ```sh
 Coloque código do prompt de comnando se for necessário
 ```
-<b>HTML:</b>
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
 
 ## 💻 Configuração para Desenvolvimento
 Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
