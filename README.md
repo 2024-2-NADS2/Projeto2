@@ -8,7 +8,7 @@
 
 ## CulturaSP
 
-## Integrantes: <a href="https://www.linkedin.com/in/felipeosantosojo/">Felipe Oluwaseun Santos Ojo</a>, <a href="https://www.linkedin.com/in/gustavocastro01/">Gustavo Castro</a>, <a href="https://www.linkedin.com/in/marcella-santana-b76883262/">Marcella Santana</a>, <a href="https://www.linkedin.com/in/thays-pontes-14663822b//">Thays Pontes</a>.
+## Integrantes: <a href="https://www.linkedin.com/in/felipeosantosojo/">Felipe Oluwaseun Santos Ojo</a>, <a href="https://www.linkedin.com/in/gustavocastro01/">Gustavo Castro</a>, <a href="https://www.linkedin.com/in/marcella-santana-b76883262/">Marcella Santana Gonçalves Diniz Rocha</a>, <a href="https://www.linkedin.com/in/thays-pontes-14663822b//">Thays Pontes</a>.
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Lopes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Carlos Buesso</a>,<a href="https://www.linkedin.com/in/victorbarq/">Victor Rosetti</a>.
 
@@ -26,17 +26,22 @@ CulturaHub é uma plataforma criada para divulgar eventos culturais, inicialment
 
 -Raiz<br>
 |<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
+|-->meu-app<br>
+  &emsp;|-->backend<br>
+  &emsp;&emsp;|-->controllers<br>
+  &emsp;&emsp;|-->db<br>
+  &emsp;&emsp;|-->models<br>
+  &emsp;&emsp;|-->routes<br>
+  &emsp;&emsp;|-->nodemodules<br>
+  &emsp;|-->nodemodules<br>
+  &emsp;&emsp;|Documentação.docx<br>
+&emsp;|-->public<br>
+  &emsp;|-->src<br>
+  &emsp;&emsp;|-->components<br>
+  &emsp;&emsp;&emsp;|-->assets<br>
+  &emsp;&emsp;&emsp;|-->Header<br>
+  &emsp;&emsp;|-->pages<br>
+
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
