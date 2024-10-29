@@ -1,36 +1,45 @@
 class User {
-    constructor(idUsuario, nome, email, senha) {
-        if (!this.verificarSenhaMinima(senha)) {
-            throw new Error("A senha deve ter ao menos 20 caracteres.");
-        }
-        this.idUsuario = idUsuario;
+    constructor( nome, sobrenome, email, senha) {
         this.nome = nome;
+        this.sobrenome = sobrenome
         this.email = email;
         this.senha = senha; 
     }
 
     // get
-    getId() {
-        return this.idUsuario;
-    }
 
     getNome() {
         return this.nome;
+    }
+    getSobrenome() {
+        return this.sobrenome;
     }
 
     getEmail() {
         return this.email;
     }
-
-    verificarSenha(senha){
-        return this.senha === senha;
+    
+    
+    verificarSenha(senha) {
+        return this.senha === senha; 
     }
 
-    verificarSenhaMinima(senha) {
-        return senha.length >= 20;
+    //set
+    setNome(nome) {
+        this.nome = nome;
     }
 
+    setSobrenome(sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    setEmail(email) {
+        this.email = email;
+    }
+
+    setSenha(senha) {
+        this.senha = senha;
+    }
 }
 
-//exportar
-module.exports = User;
+module.exports = User
