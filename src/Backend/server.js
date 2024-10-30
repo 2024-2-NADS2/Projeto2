@@ -20,7 +20,7 @@ app.post("/cadastro", (req, res) => {
             res.status(500).send(err)
             return
         }
-        //criptografa a senha e cria o usuario no banco de dados
+        //criptografa a senha e faz cria o usuario no banco de dados
         if (result.length === 0) {
             bcrypt.hash(senha, saltRounds, (err, hash) => {
                 if (err) {

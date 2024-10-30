@@ -1,15 +1,15 @@
-import Header from "../components/Header/Header";
+import Header from "../components/Header/Header"
 import React from "react";
-import Footer from "../components/Footer/Footer";
-import Main from "../components/Main/Main";
-import Login from "../components/LoginForm/Login"
+import Footer from "../components/Footer"
+import Main from "../components/BarraDeRecomendacao"
+import Login from "../components/LoginUsuario"
 
 const LoginPage = () =>{
     return(
         <div>
             <Header/>
             <Main/>
-                <Login/>
+            <Login/>
             <Footer/>
         </div>
     )

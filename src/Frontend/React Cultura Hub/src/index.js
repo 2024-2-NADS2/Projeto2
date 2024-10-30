@@ -3,25 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route, Routes, createBrowserRouter, RouterProvider } from 'react-router-dom';
-import HomePage from './Pages/HomePage';
-import LoginPage from './Pages/LoginPage';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element:<HomePage/>
-  },
-  {
-    path: "/entrar",
-    element: <LoginPage/>
-  }
-])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <App /> 
   </React.StrictMode>
 );
 
