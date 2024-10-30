@@ -76,7 +76,6 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>Banco de dados relacional</b>
 
-<b>Banco de dados não-relacional - MongoDB</b>
 
 ## 🛠 Instalação
 <b>1.0 VSCode:</b>
