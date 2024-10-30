@@ -58,23 +58,23 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>src</b>: Pasta que contém o código fonte.
 
-## 🖥 Arquivos necessários 
+## 🖥 Tecnologias utilizadas 
 
-<b> HTML </b>
+* HTML
 
-<b>JS</b>
+* JavaScript
 
-<b>CSS</b>
+* CSS
 
-<b>React</b>
+* Node.js
 
-<b>Classes</b>
+* React
 
-<b>Figma</b>
+* MySQL
+  
+* Servidor CodeSandBox
 
-<b>Servidor CodeSandBox</b>
-
-<b>Banco de dados relacional</b>
+* Figma
 
 
 ## 🛠 Instalação
