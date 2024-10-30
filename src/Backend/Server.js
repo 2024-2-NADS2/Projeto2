@@ -1,36 +1,81 @@
 const express = require('express');
-const Event = require('./event.js');
-const User = require('./user.js');  
+const cors = require('cors')
 const app = express();
-const port = 3000;
-app.use(express.json()); 
+const chubdatabase = require('./db/db.js');
+const bcrypt = require('bcrypt')
+const saltRounds = 10
+const PORT = process.env.PORT || 3001
+app.use(express.json());
+app.use(cors())
+// app.use('/cadastro', userRoutes)
 
-const eventos = [];
 
-const usuarios = [];
+//api referente a pagina de cadastro no front
+app.post("/cadastro", (req, res) => {
+    const { nome, sobrenome, email, senha } = req.body;
 
-app.post('/eventos', (req, res) => {
-    const { idEvento, titulo, descricao, tipoDeEvento, data, hora, local, organizador, preco } = req.body;
-    const novoEvento = new Event(idEvento, titulo, descricao, tipoDeEvento, data, hora, local, organizador, preco);
-    eventos.push(novoEvento);
-    res.status(201).json(novoEvento);
-});
+    // verifica se o email já existe no banco de dados
+    chubdatabase.query(`SELECT * FROM usuarios WHERE email = ?`, [email], (err, result) => {
+        if (err) {
+            res.status(500).send(err)
+            return
+        }
+        //criptografa a senha e cria o usuario no banco de dados
+        if (result.length === 0) {
+            bcrypt.hash(senha, saltRounds, (err, hash) => {
+                if (err) {
+                    res.status(500).send(err);
+                    return;
+                }
 
-app.post('/usuarios', (req, res) => {
-    const { idUsuario, nome, email, senha } = req.body;
-    const novoUsuario = new User(idUsuario, nome, email, senha);
-    usuarios.push(novoUsuario);
-    res.status(201).json(novoUsuario);
-});
+                chubdatabase.query(
+                    `INSERT INTO usuarios (nome, sobrenome, email, senha) VALUES (?, ?, ?, ?)`,
+                    [nome, sobrenome, email, hash],
+                    (err) => {
+                        if (err) {
+                            res.status(500).send(err);
+                            return;
+                        }
+                        res.status(201).send({ mensagem: "Cadastrado com sucesso" });
+                    }
+                )
+            })
+        } else {
+            res.status(409).send({ mensagem: "Email já cadastrado" });
+        }
+    })
+})
 
-app.get('/eventos', (req, res) => {
-    res.json(eventos);
-});
+//api reerente a pagina de login no front
+app.post("/entrar", (req, res) =>{
+    const { email, password } = req.body;
 
-app.get('/usuarios', (req, res) => {
-    res.json(usuarios);
-});
+    chubdatabase.query(`SELECT * FROM usuarios WHERE email = ?`, [email], (err, result) =>{
+        if(err){
+            res.status(500).send({msg: "Erro no servidor"})
+        }
+        if(result.length >0){
+            //verificaçao da senha criptografada no banco de dados
+            bcrypt.compare(password, result[0].senha, (err, match) =>{
+                if(err){
+                    res.status(500).send({msg: "Erro ao comparar senha"})
+                    return
+                }
+                if(match){
+                    res.send({msg: "Usuário logado"})
+                }else{
+                    res.send({ms:"Senha incorreta"})
+                }
+            })
+        }else{
+            res.send({msg: "Conta não encontrada"})
+        }
+    })
+})
 
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+
+
+
+app.listen(PORT, () => {
+    console.log(`Servidor rodando ${PORT}`);
 });
