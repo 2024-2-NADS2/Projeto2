@@ -142,6 +142,7 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 <p><a href="https://www.figma.com/design/44VzgjpIxXsirxOWdJtm4A/Untitled?node-id=0-1&node-type=canvas&t=pEwqi3yuOjF1taog-0" target="_blank">Link do Modelo no Figma</a></p>
 <p><a href="https://www.figma.com/design/QvT2FlVRYq8whjykBDH2Gz/Design-System-CulturaHub?m=auto&t=TJf3iJ9KncScX1HW-1" target="_blank">Link do Desing System</a></p>
+<p><a href="https://www.figma.com/design/WTJFyERfPxlN4h42QoaQb2/Guia-de-Estilo---Cultura-HUB-(Copy?m=auto&t=TJf3iJ9KncScX1HW-6)">Link do Guia de estilo</a></p>
 
 ## 📋 Licença/License
 
