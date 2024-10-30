@@ -17,9 +17,10 @@
 <p align="center">
 <img src="https://i.imgur.com/mne6mnP.png" alt="Cultura Hub" border="0">
 
-
-CulturaHub é uma plataforma criada para divulgar eventos culturais, inicialmente em São Paulo. Nela, seus usuários podem filtrar eventos de acordo com a data, local e horário. A iniciativa da plataforma é conectar pessoas com eventos que conversem com seus interesses e região. 
 <br><br>
+CulturaHub é uma plataforma digital desenvolvida para facilitar o acesso a eventos culturais, com foco inicial em São Paulo. Com filtros de data, local e horário, os usuários podem personalizar suas buscas e encontrar eventos que atendam aos seus interesses e estejam em regiões próximas. O objetivo é conectar pessoas a manifestações artísticas e culturais variadas, desde exposições de arte a shows e peças de teatro.
+
+A proposta da plataforma é dar visibilidade tanto a pequenos quanto grandes eventos, além de promover a interação entre artistas, produtores culturais e o público, criando uma comunidade engajada. O projeto busca expandir para outras cidades no futuro, ampliando seu impacto e fortalecendo conexões culturais.<br><br>
 
 
 ## 🛠 Estrutura de pastas
@@ -76,6 +77,7 @@ Há também 4 pastas que seguem da seguinte forma:
 
 * Figma
 
+* Lucidchart
 
 ## 🛠 Instalação
 <b>1.0 VSCode:</b>
