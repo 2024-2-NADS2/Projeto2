@@ -28,7 +28,8 @@ A proposta da plataforma é dar visibilidade tanto a pequenos quanto grandes eve
 -Raiz<br>
 |<br>
 |-->meu-app<br>
-  &emsp;|-->backend<br>
+  &emsp;|-->backend<br>  
+  &emsp;&emsp;|-->config<br>
   &emsp;&emsp;|-->controllers<br>
   &emsp;&emsp;|-->db<br>
   &emsp;&emsp;|-->models<br>
