@@ -18,9 +18,12 @@
 <img src="https://i.imgur.com/mne6mnP.png" alt="Cultura Hub" border="0">
 
 <br><br>
-CulturaHub é uma plataforma digital desenvolvida para facilitar o acesso a eventos culturais, com foco inicial em São Paulo. Com filtros, os usuários podem personalizar suas buscas e encontrar eventos que atendam aos seus interesses e estejam em regiões próximas. O objetivo é conectar pessoas a manifestações artísticas e culturais variadas, desde exposições de arte a shows e peças de teatro.
+O projeto CulturaHub está alinhado com os princípios da ODS 19 – Arte, Cultura e Comunicação, promovendo a pluralidade cultural e a democratização do acesso à arte. A plataforma busca conectar pessoas a manifestações artísticas e culturais variadas, desde exposições a shows e peças de teatro, criando uma rede inclusiva e engajada que fortalece a interação entre artistas, produtores culturais e o público.
 
-A proposta da plataforma é dar visibilidade tanto a pequenos quanto grandes eventos, além de promover a interação entre artistas, produtores culturais e o público, criando uma comunidade engajada e diversa. O projeto busca expandir para outras cidades no futuro, ampliando seu impacto e fortalecendo conexões culturais.<br><br>
+Através de seus filtros de busca personalizáveis, o CulturaHub democratiza a participação em eventos culturais, permitindo que pessoas de diferentes contextos sociais e geográficos tenham acesso à arte e à cultura. Além disso, ao dar visibilidade a eventos menores e facilitar conexões culturais em São Paulo, o projeto contribui para a disseminação de práticas artísticas como mecanismos de crítica social e transformação, em consonância com o objetivo de consolidar a comunicação para a paz e a cultura da diversidade.
+
+Essa iniciativa reflete diretamente os propósitos da ODS 19 ao valorizar a liberdade cultural, estimular a diversidade e incentivar uma comunicação inclusiva, essencial para o fortalecimento de comunidades mais sustentáveis e conscientes.
+<br><br>
 
 
 ## 🛠 Estrutura de pastas
@@ -109,6 +112,52 @@ Coloque código do prompt de comnando se for necessário
 ```
 ## 🗃 Histórico de lançamentos
 A cada atualização os detalhes devem ser lançados aqui.
+* 0.4.2 - 17/11/2024
+    * Adição do recurso audiodescrição nos eventos.
+    * Projeto de arquitetura da implementação do sistema concluído.
+* 0.4.1 - 16/11/2024
+    * Filtro por data/período de tempo.
+    * Notificações ao usuário definidas.
+* 0.4.0 - 13/11/2024
+    * Requisição de usuário logado feita.
+    * Página Sobre Nós definida.
+    * Ajustes na página de Criar Evento.
+    * Filtros de localização definidos.
+* 0.3.9 - 12/11/2024
+    * Primeiro modelo do site feito.
+    * Código dos filtros definidos.
+* 0.3.8 - 06/11/2024
+    * Wireframe postado.
+    * Definição do FAQ.
+* 0.3.7 - 29/10/2024
+    * Criptografia das senhas no banco de dados.
+    * Subida do banco de dados na Azure.
+    * Servidor no CodeSandBox.
+* 0.3.6 - 28/10/2024
+    * Tabelas eventos e usuários criadas no MySQL.
+    * Conexão entre o site e o banco de dados.
+* 0.3.5 - 23/10/2024
+    * Diagrama de classes feito.
+    * Design System feito.
+* 0.3.4 - 21/10/2024
+    * Licença aplicada.
+* 0.3.3 - 20/10/2024
+    * Página do usuário concluída.
+    * Verificação de autenticação de login e banco de dados.
+* 0.3.2 - 15/10/2024
+    * Testes no CodeSandBox.
+    * Página de criar evento feita.
+* 0.3.1 - 14/10/2024
+    * Introdução de Node.js e MySQL.
+* 0.3.0 - 02/10/2024
+    * Home definida e testes de responsividade nesta.
+    * Definições de requisitos e casos de uso.
+    * Rotas feitas.
+    * Guia de estilo feito.
+* 0.2.9 - 30/09/2024
+    * Paleta de cores definida.
+* 0.2.8 - 29/09/2024
+    * Classes Event e User feitas.
 * 0.2.7 - 26/09/2024
     * Figma do projeto atualizado.
     * Backlog das classes e seus atributos.
