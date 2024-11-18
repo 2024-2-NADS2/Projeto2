@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from './assets/CHUB7.png'
+import { Link } from 'react-router-dom'
 
-// Styled components
 const FooterContainer = styled.div`
   background-color: #e40031;
   padding: 5rem;   
   max-width: 2000px;
-  margin: 0 auto;
+  margin:10em auto 0;
 `
 
 const ImgContainer = styled.div`
@@ -34,7 +34,7 @@ const FooterListItem = styled.li`
   list-style: none;
 `
 
-const FooterLink = styled.a`
+const FooterLink = styled(Link)`
   text-decoration: none;
   font-size: 14px;
   color: white;
@@ -58,10 +58,10 @@ const Footer = () => {
         <FooterImage src={logo} alt="Logo" />
       </ImgContainer>
       <FooterList>
-        <FooterListItem><FooterLink href="#">Sobre nós</FooterLink></FooterListItem>
-        <FooterListItem><FooterLink href="#">FaQ</FooterLink></FooterListItem>
-        <FooterListItem><FooterLink href="#">Criar evento</FooterLink></FooterListItem>
-        <FooterListItem><FooterLink href="#">Suporte</FooterLink></FooterListItem>
+        <FooterListItem><FooterLink to="/sobre">Sobre nós</FooterLink></FooterListItem>
+        <FooterListItem><FooterLink to="/faq">FaQ</FooterLink></FooterListItem>
+        <FooterListItem><FooterLink to="/criar-evento">Criar evento</FooterLink></FooterListItem>
+        <FooterListItem><FooterLink to="/suporte">Suporte/Contato</FooterLink></FooterListItem>
       </FooterList>
       <FooterCopy>
         <FooterText>todos os direitos reservados© 2024</FooterText>

@@ -1,7 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
 
 const EventosContainer = styled.div`
   background-color: #cacaca;
@@ -10,6 +9,7 @@ const EventosContainer = styled.div`
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
+  
 `
 
 const Eventos = styled.ul`
@@ -21,25 +21,25 @@ const Eventos = styled.ul`
   font-size: 18px;
 `
 
-const LinkEventos = styled.a`
+const LinkEventos = styled(Link)`
   text-decoration: none;
   color: #e40031;
 `
 
-const Main = () => {
+const Recomendacoes = () => {
   return (
-    <>
-      <EventosContainer>
+    <EventosContainer>
+      <nav>
         <Eventos>
-          <li><LinkEventos href="/eventos">Todos os Eventos</LinkEventos></li>
-          <li><LinkEventos href="#">Shows e festas</LinkEventos></li>
-          <li><LinkEventos href="#">Cinema, Teatro e Espetáculos</LinkEventos></li>
-          <li><LinkEventos href="#">Congressos e Palestras</LinkEventos></li>
-          <li><LinkEventos href="#">Festivais</LinkEventos></li>
+          <li><LinkEventos to="/eventos">Todos os Eventos</LinkEventos></li>
+          <li><LinkEventos to="/eventos?tema=show">Shows e festas</LinkEventos></li>
+          <li><LinkEventos to="/eventos?tema=cinema">Cinema, Teatro e Espetáculos</LinkEventos></li>
+          <li><LinkEventos to="/eventos?tema=palestra">Congressos e Palestras</LinkEventos></li>
+          <li><LinkEventos to="/eventos?tema=festival">Festivais</LinkEventos></li>
         </Eventos>
-      </EventosContainer>
-    </>
+      </nav>
+    </EventosContainer>
   )
 }
 
-export default Main
+export default Recomendacoes

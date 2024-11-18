@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import { useForm } from 'react-hook-form'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { AuthContext } from '../context/auth'
 
 const Section = styled.section`
   text-align: center;
@@ -123,9 +124,46 @@ const StyledLink = styled(Link)`
   }
 `
 
+const Popup = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`
+
+const PopupContent = styled.div`
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+`
+
+const PopupButton = styled.button`
+  margin-top: 10px;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 2px;
+  background-color: #8a8a8a;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: #e40031;
+  }
+`
 
 
 const CadastroForm = () => {
+  const { isAuthenticated } = useContext(AuthContext)
+  const [popup, setPopup] = useState({ message: '', type: '' })
   const {
     register,
     handleSubmit,
@@ -134,32 +172,36 @@ const CadastroForm = () => {
   
   } = useForm({ mode: 'onChange' }) // Mudança no modo para validar enquanto o usuário digita
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const onSubmit = async (data) => {
     try {
-        // Envia os dados de registro para o backend
-        const response = await axios.post('http://localhost:3001/cadastro', {
+        const response = await axios.post('http://localhost:3001/api/cadastro', {
             nome: data.nome,
             sobrenome: data.sobrenome,
             email: data.email,
             senha: data.senha
         })
         if (response.status === 201) {
-            alert('Cadastro realizado!');
-            navigate('/entrar'); // Redireciona para a página de login
+            setPopup({message: 'Cadastro realizado com sucesso!', type: 'success'})
+            setTimeout(() => navigate('/entrar'), 3000)
         }
     } catch (err) {
         console.error('Erro ao registrar:', err);
         if(err.response && err.response.status === 409){
-          alert("Email já cadastrado")
-          navigate('/entrar')
+          setPopup( {message: "Email já cadastrado", type: 'error'})
+          setTimeout(() => navigate('/entrar'), 3000)
         }else{
-          alert("Erro ao registrar, tente novamente")
+          setPopup({message: "Erro ao registrar, tente novamente", type: 'error'})
         }
     }
-};
+  }
 
+  useEffect(() =>{
+    if(isAuthenticated){
+      navigate('/')
+    }
+  },[isAuthenticated, navigate])
 
   return (
     <Section className="cadastro-container">
@@ -229,6 +271,15 @@ const CadastroForm = () => {
           Já tem conta? <StyledLink to="/entrar">Entre!</StyledLink>
         </p>
       </Wrapper>
+      {popup.message &&(
+        <Popup>
+          <PopupContent>
+            <h2>{popup.type === 'success' ? 'Sucesso!' : 'Erro!'}</h2>
+            <p>{popup.message}</p>
+            <PopupButton onClick={() => setPopup({message: '', type: ''})}>FECHAR</PopupButton>
+          </PopupContent>
+        </Popup>
+      )}
     </Section>
   )
 }

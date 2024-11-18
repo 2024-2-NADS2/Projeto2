@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import styled from 'styled-components'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../context/auth';
 
-// Styled components
-const CadastroContainer = styled.section`
+const LoginContainer = styled.section`
   text-align: center;
   display: flex;
   justify-content: center;
@@ -120,6 +120,12 @@ const Button = styled.button`
   }
 `
 
+const FeedbackMessage = styled.p`
+  color: ${props => (props.error ? 'red' : 'green')};
+  font-size: 1rem;
+  margin-top: 10px;
+`
+
 const ForgotPassword = styled.p`
   font-size: 14px;
   margin-bottom: 20px;
@@ -139,41 +145,48 @@ const StyledLink = styled(Link)`
   }
 `
 
-// Componente Login com React Hook Form
 const Login = () => {
-  const navigate = useNavigate();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid },
-    setError,
-  } = useForm({ mode: 'onChange' });
 
-  // const [email, setEmail] = useState('')
-  // const [password, setPassword] = useState('')
+  const { login, isAuthenticated } = useContext(AuthContext)
+  const navigate = useNavigate()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [feedback, setFeedback] = useState('')
+  const { register, handleSubmit, formState: { errors, isValid } } = useForm({ mode: 'onChange' })
 
-
-
-const onSubmit = async (data) => {
-  try {
-      const response = await axios.post('http://localhost:3001/entrar',{
+  const onSubmit = async (data) => {
+    setIsSubmitting(true)
+    setFeedback('')
+    try {
+      const response = await axios.post('http://localhost:3001/api/entrar', {
         email: data.email,
         password: data.password
-      })
-      if (response.data.msg === "Usuário logado") {
-        alert(response.data.msg)
-        navigate('/') 
-      }else{
+      });
+
+      if (response.data.token) {
+        login(response.data.token, response.data.id_usuario, response.data.role)
+        navigate('/'); 
+      } else {
         alert(response.data.msg)
       }
-  } catch (error) {
-      console.error('Erro ao entrar:', error);
+    } catch (error) {
+      console.error('Erro ao entrar:', error)
       alert("Erro ao fazer login.")
+    }
+    finally{
+      setIsSubmitting(false)
+    }
   }
-}
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/')
+    }
+  }, [isAuthenticated, navigate])
+
+
 
   return (
-    <CadastroContainer>
+    <LoginContainer>
       <Wrapper>
         <Title>Acesse sua conta</Title>
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -202,18 +215,16 @@ const onSubmit = async (data) => {
             />
           </FormGroup>
           {errors.password && <ErrorMessage>{errors.password.message}</ErrorMessage>}
-          <Button type="submit" disabled={!isValid}>
-            Entrar
+          <Button type="submit" disabled={!isValid || isSubmitting}>
+            {isSubmitting ? 'Entrando...' : 'Entrar'}
           </Button>
+          {feedback && <FeedbackMessage error>{feedback}</FeedbackMessage>}
         </Form>
-        <ForgotPassword>
-          Esqueceu sua senha? <StyledLink to="#">Clique aqui!</StyledLink>
-        </ForgotPassword>
         <FooterText>
           Não possui uma conta? <StyledLink to="/cadastro">Cadastre-se!</StyledLink>
         </FooterText>
       </Wrapper>
-    </CadastroContainer>
+    </LoginContainer>
   )
 }
 
