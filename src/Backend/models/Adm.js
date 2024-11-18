@@ -1,13 +1,14 @@
-class Adm extends Usuario {
-    constructor(idUsuario, nome, email, senha, idEmpresarial, nomeEmpresa) {
-        super(idUsuario, nome, email, senha);
-        this.idEmpresarial = idEmpresarial;
-        this.nomeEmpresa = nomeEmpresa;
+import User from "./User";
+
+class Adm extends User {
+    constructor(id_usuario, nome, email, senha, idEmpresarial, nomeEmpresa) {
+        super(id_usuario, nome, email, senha)
+        this.idEmpresarial = idEmpresarial
+        this.nomeEmpresa = nomeEmpresa
     }
 
     publicEvent(evento) {
-        evento.aprovado = true; // Eventos do administrador são aprovados automaticamente
-        // Lógica para publicar o evento diretamente no sistema
+        evento.aprovado = true
     }
 }
 
