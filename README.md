@@ -8,9 +8,19 @@
 
 ## CulturaSP
 
-## Integrantes: <a href="https://www.linkedin.com/in/felipeosantosojo/">Felipe Oluwaseun Santos Ojo</a>, <a href="https://www.linkedin.com/in/gustavocastro01/">Gustavo Castro</a>, <a href="https://www.linkedin.com/in/marcella-santana-b76883262/">Marcella Santana Gonçalves Diniz Rocha</a>, <a href="https://www.linkedin.com/in/thays-pontes-14663822b//">Thays Pontes</a>.
+## Integrantes: 
+- [Felipe Oluwaseun Santos Ojo](https://www.linkedin.com/in/felipeosantosojo/)  
+- [Gustavo Castro](https://www.linkedin.com/in/gustavocastro01/)  
+- [Marcella Santana Gonçalves Diniz Rocha](https://www.linkedin.com/in/marcella-santana-b76883262/)  
+- [Thays Pontes](https://www.linkedin.com/in/thays-pontes-14663822b/)  
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Lopes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Carlos Buesso</a>,<a href="https://www.linkedin.com/in/victorbarq/">Victor Rosetti</a>.
+## Professores Orientadores:
+- [Aimar Lopes](https://www.linkedin.com/in/aimarlopes/)  
+- [Eduardo Savino](https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/)  
+- [Francisco Escobar](https://www.linkedin.com/in/francisco-escobar/)  
+- [José Carlos Buesso](https://www.linkedin.com/in/jbuesso/)  
+- [Victor Rosetti](https://www.linkedin.com/in/victorbarq/)  
+
 
 ## Descrição
 
@@ -83,33 +93,90 @@ Há também 4 pastas que seguem da seguinte forma:
 
 * Lucidchart
 
-## 🛠 Instalação
-<b>1.0 VSCode:</b>
+## 📋 Pré-requisitos
 
-Necessidade deste editor de código-fonte para o projeto e seu código em inscrito e, em seguida, adicionar a extensão Live Server.
+Antes de começar, você vai precisar ter instalado:  
+- [Node.js](https://nodejs.org/)  
+- Um editor de código como [VSCode](https://code.visualstudio.com/)  
+- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) para gerenciar o banco de dados  
+- Extensão **Live Server** no VSCode  
+- [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
 
-<b>1.1 HTML HomePage:</b>
+## 🛠 Instalação e Configuração
 
-Implementação da linhas de código HTML do projeto para estruturar a página web.
-```sh
-Coloque código do prompt de comnando se for necessário
+### 1. Criação do Diretório do Projeto
+
+Primeiro, crie uma nova pasta onde o seu projeto será armazenado. Você pode fazer isso manualmente ou via terminal:
+```bash
+mkdir CulturaHub
+cd CulturaHub
 ```
-<b>1.2 CSS HomePage:</b>
+### 2. Inicializando o Front-end (React)
 
-Estilização da página por meio do CSS.
-```sh
-Coloque código do prompt de comnando se for necessário
+Dentro da pasta do projeto, crie a estrutura para o front-end:
+```bash
+npx create-react-app front-end
+cd front-end
 ```
+Para rodar o servidor local, execute:
+```bash
+npm install
+npm start
+```
+O projeto estará disponível em http://localhost:3000.
 
-## 💻 Configuração para Desenvolvimento
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-Para abrir este projeto você necessita das seguintes ferramentas:
--<a href="https://godotengine.org/download">GODOT</a>
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
+### 3. Configuração do Back-end (Node.js)
+
+Volte para a pasta raiz do seu projeto (CulturaHub) e crie o back-end:
+```bash
+cd ..
+mkdir backend
+cd backend
+npm init -y
+npm install express mysql2
 ```
+Crie um arquivo server.js para o servidor Express e configure o banco de dados MySQL:
+```bash
+const express = require('express');
+const app = express();
+const mysql = require('mysql2');
+
+app.get('/', (req, res) => {
+  res.send('Servidor funcionando!');
+});
+
+app.listen(3001, () => {
+  console.log('Servidor rodando na porta 3001');
+});
+```
+Para o servidor rodar, execute:
+```bash
+npm run devStart
+```
+Fará com que o servidor backend rode na porta http://localhost:3001.
+
+### 4. Configuração do Banco de Dados MySQL
+
+Instale o MySQL no seu computador e crie um banco de dados para o projeto.
+
+* Abra o MySQL Workbench e crie um novo banco de dados.
+* Rode os scripts SQL disponíveis no repositório para criar as tabelas necessárias
+
+### 5. Conectando o Front-end e o Back-end
+
+Agora que ambos os servidores estão funcionando, você pode configurar o front-end para se comunicar com o back-end através de chamadas API.
+
+### 6. Término da configuração no Azure CLI
+
+Com tudo rodando localmente, o seu projeto estará configurado e pronto para ser desenvolvido. Por meio do Azure, seu projeto será hospedado em um serviço on-line da seguinte maneira:
+* Instalação do Azure CLI
+   Possível fazer isso com o comando:
+
+   ```bash
+   npm install -g azure-cli
+
+O App Service (oferecido pelo Azure) hospeda seu back-end e Azure Static Web Apps para hospedar o front-end React.
+
 ## 🗃 Histórico de lançamentos
 A cada atualização os detalhes devem ser lançados aqui.
 * 0.4.2 - 17/11/2024
