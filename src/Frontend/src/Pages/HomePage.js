@@ -1,15 +1,15 @@
 import Header from "../components/Header/Header";
 import React from "react";
 import Footer from "../components/Footer";
-import Main from "../components/BarraDeRecomendacao";
-import HomeSlider from "../components/SliderHomeP";
-import CardSlider from "../components/CardCarrossel";
+import HomeSlider from "../components/SliderHome";
+import CardSlider from "../components/Cards";
+import Recomendacoes from "../components/BarraDeRecomendacao";
 
 const HomePage = () =>{
     return(
         <div>
             <Header/>
-            <Main/>
+            <Recomendacoes/>
             <HomeSlider/>
             <CardSlider/>
             <Footer/>
