@@ -151,7 +151,7 @@ app.listen(3001, () => {
 ```
 Para o servidor rodar, execute:
 ```bash
-npm run devStart
+npm start
 ```
 Fará com que o servidor backend rode na porta http://localhost:3001.
 
