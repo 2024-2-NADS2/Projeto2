@@ -1,10 +1,20 @@
 const express = require('express');
-const userController = require('../controllers/userController');
+const {userSignUp, getUserById, getEventCreatedByUser, saveEvent, verifySave, notifyUser, deleteFavoriteEvent, getSavedEvents, supportMessage} = require('../controllers/userController');
 const router = express.Router();
-// import { getUser } from '../controllers/userController'
 
-// router.post('/', userController.registerUser);
-// router.post('/entrar', userController.loginUser);
-// router.get('/adm-usuarios', getUser)
+router.post('/cadastro', userSignUp)
+router.get('/perfil/:id', getUserById)
+router.get('/perfil/eventos/:id', getEventCreatedByUser)
+router.get('/perfil/eventos-salvos/:userId', getSavedEvents)
 
-module.exports = router;
+
+router.get('/notifications/:id', notifyUser)
+
+router.post('/contato', supportMessage);
+
+router.post('/eventos/:id/salvar', saveEvent)
+router.delete('/eventos/:id/desfavoritar', deleteFavoriteEvent)
+router.get('/eventos/:id/favorito/:userId', verifySave)
+
+
+module.exports = router
