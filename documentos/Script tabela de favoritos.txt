@@ -1,0 +1,11 @@
+CREATE TABLE `favoritos` (
+    `id_favorito` int NOT NULL AUTO_INCREMENT,
+    `id_usuario` int NOT NULL,
+    `id_evento` int DEFAULT NULL,
+    `data_favoritado` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id_favorito`),
+    KEY `id_usuario` (`id_usuario`),
+    KEY `id_evento` (`id_evento`),
+    CONSTRAINT `favoritos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE,
+    CONSTRAINT `favoritos_ibfk_2` FOREIGN KEY (`id_evento`) REFERENCES `eventos` (`id_evento`) ON DELETE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 42 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci

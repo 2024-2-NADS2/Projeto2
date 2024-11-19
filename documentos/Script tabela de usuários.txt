@@ -1,0 +1,14 @@
+CREATE TABLE `usuarios` (
+    `id_usuario` int NOT NULL AUTO_INCREMENT,
+    `nome` varchar(100) NOT NULL,
+    `sobrenome` varchar(100) NOT NULL,
+    `email` varchar(100) NOT NULL,
+    `senha` varchar(255) NOT NULL,
+    `role` enum(
+        'Admin',
+        'Verificado',
+        'Comum'
+    ) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'Comum',
+    PRIMARY KEY (`id_usuario`),
+    UNIQUE KEY `email` (`email`)
+) ENGINE = InnoDB AUTO_INCREMENT = 20 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci

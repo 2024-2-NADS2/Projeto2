@@ -1,0 +1,14 @@
+CREATE TABLE `suporte_contato` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `email` varchar(255) NOT NULL,
+    `assunto` enum(
+        'Cadastro e Login',
+        'Dúvidas',
+        'Parcerias',
+        'Eventos',
+        'Denúncia'
+    ) NOT NULL,
+    `descricao` text NOT NULL,
+    `data_envio` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT = 7 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci
