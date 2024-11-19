@@ -27,6 +27,11 @@
 <p align="center">
 <img src="https://i.imgur.com/mne6mnP.png" alt="Cultura Hub" border="0">
 
+<h1>💻 Cultura Hub - Hospedado no Netlify</h1>
+🔗 https://culturahub.netlify.app
+<h1>💾 Servidor Backend - Hospedado no CodeSandBox</h1>
+🔗 https://codesandbox.io/p/devbox/culturahub-69kn4g
+
 <br><br>
 O projeto CulturaHub está alinhado com os princípios da ODS 19 – Arte, Cultura e Comunicação, promovendo a pluralidade cultural e a democratização do acesso à arte. A plataforma busca conectar pessoas a manifestações artísticas e culturais variadas, desde exposições a shows e peças de teatro, criando uma rede inclusiva e engajada que fortalece a interação entre artistas, produtores culturais e o público.
 
@@ -40,23 +45,23 @@ Essa iniciativa reflete diretamente os propósitos da ODS 19 ao valorizar a libe
 
 -Raiz<br>
 |<br>
-|-->meu-app<br>
-  &emsp;|-->backend<br>  
+|-->documentos<br>
+|-->imagens<br>
+|-->src<br>
+  &emsp;|-->Backend<br>
   &emsp;&emsp;|-->config<br>
   &emsp;&emsp;|-->controllers<br>
   &emsp;&emsp;|-->db<br>
   &emsp;&emsp;|-->models<br>
   &emsp;&emsp;|-->routes<br>
-  &emsp;&emsp;|-->nodemodules<br>
-  &emsp;|-->nodemodules<br>
-  &emsp;&emsp;|Documentação.docx<br>
-&emsp;|-->public<br>
-  &emsp;|-->src<br>
-  &emsp;&emsp;|-->components<br>
-  &emsp;&emsp;&emsp;|-->assets<br>
-  &emsp;&emsp;&emsp;|-->Header<br>
-  &emsp;&emsp;|-->pages<br>
-
+  &emsp;|-->Frontend<br>
+  &emsp;&emsp;|-->public<br>
+  &emsp;&emsp;|-->src<br>
+    &emsp;&emsp;&emsp;|-->pages<br>
+    &emsp;&emsp;&emsp;|-->context<br>
+    &emsp;&emsp;&emsp;|-->components<br>
+    &emsp;&emsp;&emsp;&emsp;|-->assets<br>
+    &emsp;&emsp;&emsp;&emsp;|-->header<br>
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
@@ -66,8 +71,6 @@ A pasta raiz contem dois arquivos que devem ser alterados:
 Há também 4 pastas que seguem da seguinte forma:
 
 <b>documentos</b>: Toda a documentação estará nesta pasta.
-
-<b>executáveis</b>: Binários e executáveis do projeto devem estar nesta pasta.
 
 <b>imagens</b>: Imagens do sistema
 
@@ -106,50 +109,50 @@ Antes de começar, você vai precisar ter instalado:
 
 ### 1. Criação do Diretório do Projeto
 
-Primeiro, crie uma nova pasta onde o seu projeto será armazenado. Você pode fazer isso manualmente ou via terminal:
+Primeiro, faça o download das pastas "Frontend" e "Backend", elas estão localizadas dentro da pasta "scr".
+
+Em seguida, crie uma nova pasta onde o seu projeto será armazenado. Você pode fazer isso manualmente ou via terminal:
 ```bash
-mkdir CulturaHub
-cd CulturaHub
+mkdir culturaHub
+cd culturaHub
 ```
+
+Dentro da pasta do projeto, extraia todos os arquivos que estão dentro da pasta "Frontend" para a raiz e mantenha tudo relacionado ao backend dentro da própria pasta.
+
+A estrutura das pastas e dos arquivos deverá ficar da seguinte forma:
+
+|-->culturahub<br>
+  &emsp;|-->backend<br>
+  &emsp;|-->nodemodules<br>
+  &emsp;|-->public<br>
+  &emsp;|-->src<br>
+  &emsp;.gitignore<br>
+  &emsp;package-lock.json<br>
+  &emsp;package.json<br>
+  
 ### 2. Inicializando o Front-end (React)
 
-Dentro da pasta do projeto, crie a estrutura para o front-end:
-```bash
-npx create-react-app front-end
-cd front-end
-```
-Para rodar o servidor local, execute:
+Ainda na raiz do projeto, abra o terminal instale as dependências necessárias:
+
 ```bash
 npm install
+```
+
+Para rodar o site Web localmente, execute:
+```bash
 npm start
 ```
 O projeto estará disponível em http://localhost:3000.
 
 ### 3. Configuração do Back-end (Node.js)
 
-Volte para a pasta raiz do seu projeto (CulturaHub) e crie o back-end:
+Abra um novo terminal e acesse a pasta do backend para instalar as dependências da seguinte forma:
 ```bash
-cd ..
-mkdir backend
-cd backend
-npm init -y
-npm install express mysql2
+cd ./backend
+npm install
 ```
-Crie um arquivo server.js para o servidor Express e configure o banco de dados MySQL:
-```bash
-const express = require('express');
-const app = express();
-const mysql = require('mysql2');
 
-app.get('/', (req, res) => {
-  res.send('Servidor funcionando!');
-});
-
-app.listen(3001, () => {
-  console.log('Servidor rodando na porta 3001');
-});
-```
-Para o servidor rodar, execute:
+Após isso, inicie o servidor localmente assim:
 ```bash
 npm start
 ```
@@ -179,6 +182,8 @@ O App Service (oferecido pelo Azure) hospeda seu back-end e Azure Static Web App
 
 ## 🗃 Histórico de lançamentos
 A cada atualização os detalhes devem ser lançados aqui.
+* 0.5.0 - 18/11/2024
+    * Entrega do projeto final.
 * 0.4.2 - 17/11/2024
     * Adição do recurso audiodescrição nos eventos.
     * Projeto de arquitetura da implementação do sistema concluído.
